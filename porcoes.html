@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nil Burguer- A melhor H umburgueria da região!" />
+    <meta property="og:image" content="https://nellburguer.vercel.app/assets/Nil.enc" />
+    <meta property="og:description" content="O melhor Hamburguer caseiro da região." />
+    <meta property="og:site_name" content="Nil Burguer" />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Nil Burguer</title>
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header class="w-full h-auto bg-zinc-800 bg-home bg-cover bg-center p-4">
+        <div class="w-full h-auto flex flex-col justify-center items-center">
+            <img src="assets/Nil.enc" alt="Logo Nil Burguer"
+                class="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
+            <h1 class="text-2xl md:text-4xl mt-4 mb-2 font-bold text-white">Nil Burguer</h1>
+
+            <span class="text-sm md:text-base text-white font-medium text-center">
+                Rua Povoado do Rio Novo, 67 - Vila Mirante - São Paulo - SP
+            </span>
+
+            <div class="bg-green-600 px-2 py-1 rounded-lg mt-5 text-center" id="date-span">
+                <span class="text-white font-medium block md:inline">Terça á Quinta - 18:30 as 22:00 |</span>
+                <span class="text-white font-medium block md:inline">Sex. e Sáb. - 18:30 as 24:00</span>
+            </div>
+        </div>
+    </header>
+    <!-- FIM HEADER-->
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        Conheça nosso menu
+    </h2>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav class="bg-gray-200 py-3 px-4">
+        <div class="flex justify-between items-center">
+
+            <!-- Botão de menu (hambúrguer) para telas pequenas -->
+            <button class="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none" id="menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu padrão (visível em telas médias e grandes) -->
+        <ul class="hidden md:flex justify-center space-x-4 mt-2">
+            <li><a href="index.html" class="text-lg font-medium text-gray-700 hover:text-gray-900">Home</a></li>
+        </ul>
+
+        <!-- Menu de hambúrguer (visível apenas em telas pequenas) -->
+        <ul class="absolute top-12 left-0 w-full bg-gray-200 md:hidden hidden" id="menu-mobile">
+            <li><a href="index.html"
+                    class="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Home</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('menu-mobile');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- FIM MENU DE NAVEGAÇÃO -->
+
+    <!-- INICIO MENU -->
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-1.png" alt="Hamburguer Smash"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div>
+                    <p class="font-bold">Hamburguer Smash</p>
+                    <p class="text-sm">Pão levinho de fermetação natural da Trigou, burguer 160g queijo prato e maionese
+                        da casa.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 18.90</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash"
+                            data-price="18.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-2.png" alt="Hamburguer Duplo"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div>
+                    <p class="font-bold">Hamburguer Duplo</p>
+                    <p class="text-sm">Pão levinho de fermetação natural da Trigou, burguer 160g queijo prato e maionese
+                        da casa.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 32.90</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Duplo"
+                            data-price="32.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-3.png" alt="X-Egg Burguer"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div>
+                    <p class="font-bold">X-Egg Burguer</p>
+                    <p class="text-sm">Pão levinho de fermetação natural da Trigou, burguer 160g queijo prato e maionese
+                        da casa.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 25.80</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Salad"
+                            data-price="25.80">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-4.png" alt="Chicken Burguer"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div>
+                    <p class="font-bold">Chicken Burguer</p>
+                    <p class="text-sm">Pão levinho de fermetação natural da Trigou, burguer 160g queijo prato e maionese
+                        da casa.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 30.90</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Chicken Burguer"
+                            data-price="30.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+        </main>
+    </div>
+    <!-- FIM MENU -->
+
+    <!--MODAL CART-->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal"
+        style="overflow: auto;">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]" style="max-height: 90vh; overflow-y: auto;">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <!-- Taxa de Entrega -->
+            <p style="color: red; font-size: 18px; font-weight: bold; margin-top: 16px;">
+                Taxa de entrega: R$ 5,00
+            </p>
+
+            <p class="font-bold mt-4">Endereço para entrega:</p>
+            <input type="text" placeholder="Digite seu endereço para entrega..." id="address"
+                class="w-full border-2 p-1 rounded my-1" />
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço para entrega!</p>
+
+            <p class="font-bold mt-4">Digite seu nome:</p>
+            <input type="text" placeholder="Digite seu nome..." id="nameclient"
+                class="w-full border-2 p-1 rounded my-1" />
+            <p class="text-red-500 hidden" id="nameclient-warn">Digite seu nome!</p>
+
+            <p class="font-bold mt-4">Opcionais:</p>
+            <input type="text" placeholder="Digite aqui os opcionais do seu lanche..." id="optional"
+                class="w-full border-2 p-1 rounded my-1" />
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn" class="font-bold">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+            </div>
+        </div>
+    </div>
+    <!--FIM MODAL CART-->
+
+    <!--BUTTON CART FOOTER-->
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+    <!--FIM BUTTON CART FOOTER-->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
