@@ -675,14 +675,6 @@ video {
   top: 0px;
 }
 
-.top-12 {
-  top: 3rem;
-}
-
-.top-14 {
-  top: 3.5rem;
-}
-
 .isolate {
   isolation: isolate;
 }
@@ -759,11 +751,6 @@ video {
 .my-1 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .mb-16 {
@@ -2225,11 +2212,6 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-lg {

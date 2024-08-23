@@ -31,7 +31,7 @@
     <!-- HEADER-->
     <header class="w-full h-auto bg-zinc-800 bg-home bg-cover bg-center p-4">
         <div class="w-full h-auto flex flex-col justify-center items-center">
-            <img src="assets/Nil.enc" alt="Logo Nil Burguer"
+            <img src="assets/nilburguer.png" alt="Logo Nil Burguer"
                 class="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
             <h1 class="text-2xl md:text-4xl mt-4 mb-2 font-bold text-white">Nil Burguer</h1>
 
@@ -50,7 +50,7 @@
         Conheça nosso menu
     </h2>
 
-    <!-- MENU DE NAVEGAÇÃO -->
+
     <!-- MENU DE NAVEGAÇÃO -->
     <nav class="bg-gray-200 py-3 mb-8">
         <div class="flex justify-between items-center px-4 md:px-6">
@@ -64,16 +64,40 @@
                 </svg>
             </button>
         </div>
-
-        <!-- Menu padrão (visível em telas médias e grandes) -->
-        <ul class="hidden md:flex justify-center space-x-4 mt-2">
-            <li><a href="index.html" class="text-lg font-medium text-gray-700 hover:text-gray-900">Home</a></li>
+        <ul class="hidden md:flex justify-center space-x-4 px-4 md:px-6">
+            <li><a href="bebidas.html" class="text-lg font-medium text-gray-700 hover:text-gray-900">Bebidas</a></li>
+            <li><a href="beirutes.html" class="text-lg font-medium text-gray-700 hover:text-gray-900">Beirutes</a></li>
+            <li><a href="combos.html" class="text-lg font-medium text-gray-700 hover:text-gray-900">Combos</a></li>
+            <li><a href="artesanal.html" class="text-lg font-medium text-gray-700 hover:text-gray-900">Hamburguer
+                    Artesanal</a></li>
+            <li><a href="baguete.html" class="text-lg font-medium text-gray-700 hover:text-gray-900">Lanches na
+                    Baguete</a></li>
+            <li><a href="omeletes.html" class="text-lg font-medium text-gray-700 hover:text-gray-900">Omeletes</a></li>
+            <li><a href="porcoes.html" class="text-lg font-medium text-gray-700 hover:text-gray-900">Porções</a></li>
+            <li><a href="tradicionais.html"
+                    class="text-lg font-medium text-gray-700 hover:text-gray-900">Tradicionais</a></li>
         </ul>
 
         <!-- Menu de hambúrguer (visível apenas em telas pequenas) -->
-        <ul class="absolute left-0 w-full bg-gray-200 md:hidden hidden" id="menu-mobile">
-            <li><a href="index.html"
-                    class="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Home</a></li>
+        <ul class="fixed left-0 w-full bg-gray-200 md:hidden hidden flex-col z-20" id="menu-mobile">
+            <li><a href="bebidas.html"
+                    class="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Bebidas</a></li>
+            <li><a href="beirutes.html"
+                    class="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Beirutes</a></li>
+            <li><a href="combos.html"
+                    class="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Combos</a></li>
+            <li><a href="artesanal.html"
+                    class="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Hamburguer
+                    Artesanal</a></li>
+            <li><a href="baguete.html"
+                    class="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Lanches na Baguete</a>
+            </li>
+            <li><a href="omeletes.html"
+                    class="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Omeletes</a></li>
+            <li><a href="porcoes.html"
+                    class="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Porções</a></li>
+            <li><a href="tradicionais.html"
+                    class="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-gray-900">Tradicionais</a></li>
         </ul>
     </nav>
 
@@ -83,7 +107,7 @@
             menu.classList.toggle('hidden');
         });
     </script>
-
+    
     <!-- FIM MENU DE NAVEGAÇÃO -->
 
     <!-- INICIO MENU -->
@@ -219,7 +243,7 @@
     <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
         <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
             (<span id="cart-count">0</span>)
-            Veja meu carrinho
+            Ver meu carrinho
             <i class="fa fa-cart-plus text-lg text-white"></i>
         </button>
     </footer>
