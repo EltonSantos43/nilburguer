@@ -205,7 +205,7 @@ checkoutBtn.addEventListener("click", function () {
     }
     whatsappMessage += `%0A%0A${cartItems}%0A%0ATotal: R$ ${total}%0ATaxa de entrega: R$ ${deliveryCharge}%0ATotal com taxa: R$ ${totalWithFee}`;
 
-    const phone = "5511993909028";
+    const phone = "5511910783337";
     window.open(`https://wa.me/${phone}?text=${whatsappMessage}`, "_blank");
 
     cart = [];
